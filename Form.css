@@ -1,0 +1,90 @@
+body {
+	background-image: url('mahasiswa2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2{
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 30px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+	border-radius: 15px;
+}
+
+main {
+    display: flex;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+#content {
+    flex: 3;
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: auto;
+    text-align: center;
+}

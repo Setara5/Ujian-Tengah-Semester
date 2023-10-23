@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulir</title>
+    <link rel="stylesheet" href="Form.css">
+
+</head>
+<body>
+    <header class="header">
+            <img src="Logo_ITERA.png" alt="Itera" width="110px" >
+            <h1>FORM PENDAFTARAN</h1>
+    </header>
+
+    <main>
+        <section id="content">
+            <h2>Formulir Pendaftaran</h2>
+            <form id="studentForm">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+                <br>
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" name="nim" required>
+                <br>
+                <label for="prodi">Program Studi:</label>
+                <input type="text" id="prodi" name="prodi" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <label>Jenis Kelamin:</label>
+                <input type="radio" id="lakiLaki" name="jenisKelamin" value="Laki-laki" required>
+                <label for="lakiLaki">Laki-laki</label>
+                <input type="radio" id="perempuan" name="jenisKelamin" value="Perempuan" required>
+                <label for="perempuan">Perempuan</label>
+                <br>
+                <br>
+                <label for="tanggalLahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggalLahir" name="tanggalLahir" required><br>
+                <br>
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+                <br>
+                <center><input type="submit" value="Daftar"></center>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; By Ferreyla Setara (2023)</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("#studentForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const nama = document.querySelector("#nama").value;
+            const nim = document.querySelector("#nim").value;
+            const prodi = document.querySelector("#prodi").value;
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
+            const jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked').value;
+            const tanggalLahir = document.querySelector("#tanggalLahir").value;
+            const alamat = document.querySelector("#alamat").value;
+
+            const url = `tabel.html?nama=${nama}&nim=${nim}&prodi=${prodi}&email=${email}&password=${password}&jenisKelamin=${jenisKelamin}&tanggalLahir=${tanggalLahir}&alamat=${alamat}`;
+
+            window.location.href = url;
+        });
+    });
+    </script>
+
+</body>
+</html>

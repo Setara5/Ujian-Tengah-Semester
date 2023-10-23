@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tabel.css">
+    <title>Table</title>
+</head>
+<body>
+
+    <header class="header">
+        <img src="Logo_ITERA.png" alt="Logo_ITERA" width="110px" >
+        <h1>DATA PENDAFTAR</h1>
+    </header>
+
+    <main>
+        <section id="content">
+            <h2>Data Mahasiswa yang Telah Mendaftar</h2>
+            <table id="studentTable">
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Program Studi</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                </tr>
+
+                <tr>
+                    <td>Yusuf</td>
+                    <td>121152756</td>
+                    <td>Teknik Geomatika</td>
+                    <td>Yusuf756@gmail.com</td>
+                    <td>Yusuf756</td>
+                    <td>Laki-laki</td>
+                    <td>2002-8-13</td>
+                    <td>Bandung</td>
+                </tr>
+
+                <tr>
+                    <td>Yusuf</td>
+                    <td>121152756</td>
+                    <td>Teknik Geomatika</td>
+                    <td>Yusuf756@gmail.com</td>
+                    <td>Yusuf756</td>
+                    <td>Laki-laki</td>
+                    <td>2002-8-13</td>
+                    <td>Bandung</td>
+                </tr>
+
+                <tr>
+                    <td>Yusuf</td>
+                    <td>121152756</td>
+                    <td>Teknik Geomatika</td>
+                    <td>Yusuf756@gmail.com</td>
+                    <td>Yusuf756</td>
+                    <td>Laki-laki</td>
+                    <td>2002-8-13</td>
+                    <td>Bandung</td>
+                </tr>
+
+                <tr>
+                    <td>Yusuf</td>
+                    <td>121152756</td>
+                    <td>Teknik Geomatika</td>
+                    <td>Yusuf756@gmail.com</td>
+                    <td>Yusuf756</td>
+                    <td>Laki-laki</td>
+                    <td>2002-8-13</td>
+                    <td>Bandung</td>
+                </tr>
+                
+                <tr>
+                    <td>Yusuf</td>
+                    <td>121152756</td>
+                    <td>Teknik Geomatika</td>
+                    <td>Yusuf756@gmail.com</td>
+                    <td>Yusuf756</td>
+                    <td>Laki-laki</td>
+                    <td>2002-8-13</td>
+                    <td>Bandung</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <center><p>&copy; By Ferreyla Setara (2023)</p></center>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const studentTable = document.getElementById("studentTable");
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        if (urlParams.has("nama") && urlParams.has("nim") && urlParams.has("prodi") && urlParams.has("email") &&
+            urlParams.has("password") && urlParams.has("jenisKelamin") && urlParams.has("tanggalLahir") && urlParams.has("alamat")) {
+            const nama = urlParams.get("nama");
+            const nim = urlParams.get("nim");
+            const prodi = urlParams.get("prodi");
+            const email = urlParams.get("email");
+            const password = urlParams.get("password");
+            const jenisKelamin = urlParams.get("jenisKelamin");
+            const tanggalLahir = urlParams.get("tanggalLahir");
+            const alamat = urlParams.get("alamat");
+
+            const newRow = studentTable.insertRow(-1);
+
+            const cellNama = newRow.insertCell(0);
+            const cellNIM = newRow.insertCell(1);
+            const cellProdi = newRow.insertCell(2);
+            const cellEmail = newRow.insertCell(3);
+            const cellPassword = newRow.insertCell(4);
+            const cellJenisKelamin = newRow.insertCell(5);
+            const cellTanggalLahir = newRow.insertCell(6);
+            const cellAlamat = newRow.insertCell(7);
+
+            cellNama.innerHTML = nama;
+            cellNIM.innerHTML = nim;
+            cellProdi.innerHTML = prodi;
+            cellEmail.innerHTML = email;
+            cellPassword.innerHTML = password;
+            cellJenisKelamin.innerHTML = jenisKelamin;
+            cellTanggalLahir.innerHTML = tanggalLahir;
+            cellAlamat.innerHTML = alamat;
+        }
+    });
+    </script>
+</body>
+</html>
